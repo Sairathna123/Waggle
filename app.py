@@ -4,10 +4,11 @@ import cv2
 import pandas as pd
 import tempfile
 from collections import Counter
-import mediapipe as mp
+from mediapipe import solutions
+from mediapipe.framework.formats import landmark_pb2
 import pickle
 
-st.set_page_config(layout="wide", page_title="Waggle — Dog Mood Detector")
+st.set_page_config(layout="wide", page_title="Waggle - Dog Mood Detector")
 
 # ----------------- Load model and encoder -----------------
 clf = None
@@ -21,7 +22,7 @@ except Exception as e:
     st.error(f"Could not load model/encoder — make sure model/model.pkl and model/encoder.pkl exist. ({e})")
 
 # ----------------- MediaPipe Pose init -----------------
-mp_pose = mp.solutions.pose
+mp_pose = solutions.pose
 pose = mp_pose.Pose(static_image_mode=True)
 
 # ----------------- Styling -----------------
