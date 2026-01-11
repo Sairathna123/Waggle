@@ -6,31 +6,17 @@ Waggle is an AI-driven system for early detection of canine stress and pre-aggre
 
 **Status:** This is a prototype application developed during an internship at Elysium Technologies.
 
-## Project Purpose and Scope
+## Project Purpose
 
-### Motivation
+Dogs communicate emotions through subtle body language (tail, ears, posture), but early stress and pre-aggression signals often go undetected by humans. This project aims to develop an AI system that automatically detects these behavioral patterns to improve human-dog interactions and prevent unsafe situations.
 
-Dogs communicate emotions predominantly through subtle body language (tail position, ear orientation, posture, facial expressions). Early signs of stress or nervousness often precede aggression but are frequently missed by humans. Advanced computer vision and machine learning techniques now enable automatic detection of these subtle behavioral patterns in real-time, offering opportunities to improve human-dog interactions and prevent unsafe situations.
-
-### Problem Statement
-
-Subtle canine stress and pre-aggression cues are difficult for humans to detect consistently. Early behavioral signals often go unnoticed, potentially leading to preventable incidents. A real-time, explainable AI system can bridge this gap by automatically analyzing dog behavior and providing actionable insights.
-
-### Technical Objectives
-
-- Extract body keypoints and pose landmarks using MediaPipe Pose estimation
-- Analyze temporal behavior patterns using LSTM deep learning models
-- Classify dog emotional states into three categories: friendly, nervous, pre-aggressive
+Key Objectives:
+- Extract body keypoints using MediaPipe Pose estimation for detailed behavioral analysis
+- Apply LSTM models to analyze temporal patterns and classify emotional states (friendly, nervous, pre-aggressive)
 - Build and optimize multi-class machine learning classifiers
 - Implement explainable AI to highlight key body movements influencing predictions
-- Develop an end-to-end machine learning pipeline for video-to-prediction workflow
-
-### Non-Technical Objectives
-
 - Educate dog owners, trainers, and veterinarians about canine stress signals
-- Provide accessible, real-time insights for improved human-dog safety
-- Demonstrate practical AI applications in animal behavior analysis
-- Bridge advanced machine learning techniques with real-world usability
+- Provide real-time, accessible insights for improved safety and care
 
 ## How It Works
 
@@ -163,43 +149,11 @@ A sample demo video is available in the repository:
 3. View the predicted emotional state and confidence scores
 4. Examine visual explanations highlighting key body cues
 
-## File Structure
+## Results and Future Directions
 
-```
-Waggle/
-├── app.py                 # Main Streamlit application
-├── dog_pose_extractor.py  # Pose extraction utilities
-├── requirements.txt       # Python dependencies
-├── runtime.txt           # Runtime specifications
-├── packages.txt          # System package dependencies
-├── model/                # Pre-trained models and encoders
-│   ├── model.pkl        # Trained classifier
-│   └── encoder.pkl      # Label encoder
-├── data/                 # Training dataset (self-collected)
-├── Sample videos/        # Example videos for testing
-└── README.md            # This file
-```
+The system has successfully demonstrated reliable performance in classifying canine emotional states. It accurately extracts pose landmarks across varied dog breeds, predicts emotional states with interpretable explanations, and operates with real-time performance suitable for practical deployment.
 
-## Results and Findings
-
-Waggle has demonstrated reliable performance in classifying canine emotional states from video data. The system successfully:
-- Extracts consistent pose landmarks across varied dog breeds and postures
-- Accurately predicts emotional states with interpretable explanations
-- Provides actionable insights for behavioral monitoring
-- Operates with real-time performance suitable for practical deployment
-
-## Future Work
-
-- **Multimodal Analysis:** Integration of sound and voice analysis to study barking patterns and acoustic cues alongside visual data
-- **Expanded Behavior Categories:** Extension to include playful, submissive, fearful, and relaxed states
-- **Smart Camera Deployment:** Integration with security camera systems with intelligent alerting for behavior-related risks
-- **Enhanced Explainability:** Implementation of heatmaps and improved visual highlights for clearer user understanding
-- **Dataset Expansion:** Collection of larger and more diverse datasets to improve accuracy and enable multi-dog simultaneous monitoring
-- **Model Optimization:** Fine-tuning for edge device deployment with minimal latency
-
-## Conclusion
-
-Waggle demonstrates the practical application of AI in animal behavior analysis, combining computer vision and deep learning to improve human-dog interactions. By providing explainable, real-time insights into canine emotional states, the system offers value to dog owners, shelters, trainers, and veterinarians. With its user-friendly interface and robust technical foundation, Waggle shows strong potential for real-world deployment in behavioral monitoring and safety applications.
+Future enhancements include multimodal analysis (sound and acoustic cues), expanded behavior categories (playful, submissive, fearful, relaxed), smart camera deployment with intelligent alerts, improved explainability through heatmaps, larger diverse datasets for multi-dog monitoring, and edge device optimization. Waggle demonstrates the practical application of AI in animal behavior analysis, offering significant value to dog owners, trainers, veterinarians, and shelters while improving human-dog safety and interactions.
 
 
 
