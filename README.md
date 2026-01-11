@@ -112,10 +112,7 @@ The training dataset has been collected independently and is stored in the `data
 
 ## Demo
 
-A sample demo video is available in the repository:
-- **Waggle.mp4** - Example video demonstrating the system's behavior classification capabilities. Upload this video through the Streamlit interface to see the model in action.
-
-## Installation and Usage
+[Demo video](https://drive.google.com/file/d/1jjJ-A2AUr7TiNK-fb42jakn3OZ95BbWU/view?usp=sharing)
 
 ### Requirements
 
