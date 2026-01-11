@@ -1,6 +1,6 @@
 streamlit
 opencv-python
-mediapipe==0.9.3
+mediapipe
 pandas
-scikit-learn==1.6.1
+scikit-learn
 numpy
